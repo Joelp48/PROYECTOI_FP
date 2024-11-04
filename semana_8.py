@@ -21,5 +21,5 @@ def main():
     else:
         st.write("por favor, ingrese un radio mayor a cero.")
 
-if __name__ =="__main__"
-main()                       
+if __name__ =="__main__":
+    main()                       
