@@ -1,26 +1,25 @@
 import streamlit as st
+import math
 
-def verificar_contrasena():
-    st.title("Verificación de contraseña")
+def calcular_area(radio):
+    return math.pi * (radio ** 2)
 
-    # Contraseña correcta
-    contrasena_correcta = "asdasd"
+def calcular_perimetro(radio):
+    return 2 * math.pi * radio
 
-    # Inicializar variable de sesión para almacenar la entrada del usuario
-    if "contrasena_ingresada" not in st.session_state:
-        st.session_state.contrasena_ingresada = ""
+def main():
+    st.title("calculo del area y perimetro de una circunferencia:")
 
-    # Input de la contraseña
-    contrasena_ingresada = st.text_input("Introduce la contraseña:", type="password")
+    radio = sr.number_input("ingrese el radio de la circunferencia:", min_value=0.0, step=0)
 
-    # Botón para verificar la contraseña
-    if st.button("Verificar"):
-        if contrasena_ingresada == contrasena_correcta:
-            st.session_state.contrasena_ingresada = contrasena_ingresada
-            st.success("Bienvenido")
-        else:
-            st.error("Contraseña incorrecta, intenta de nuevo")
+    if radio > 0:
+        area = calcular_area(radio)
+        perimetro = calcular_perimetro(radio)
 
-# Llamada a la función principal
-if __name__ == "__main__":
-    verificar_contrasena()
+        st.write(f"area: {area:.2f}")
+        st.write(f"perimetro: {perimetro:.2f}") 
+    else:
+        st.write("por favor, ingrese un radio mayor a cero.")
+
+if __name__ =="__main__"
+main()                       
