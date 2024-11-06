@@ -12,7 +12,7 @@ def calcular_media(array):
 
 # Ejecución del programa en Streamlit
 def main():
-    st.title("Ejercicio 3: Media de Valores en un Array")
+    st.title("Ejercicio 7: Media de Valores en un Array")
 
     # Seleccionar tamaño del array y rellenar el array
     tamano = st.number_input("Ingrese el tamaño del array:", min_value=1, step=1)
